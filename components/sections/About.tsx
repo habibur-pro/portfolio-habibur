@@ -1,13 +1,14 @@
 "use client";
 import photo from "@/assets/photo.jpg";
-import Resume from "@/assets/Resume.pdf";
+import { Link } from "react-scroll";
+// import Resume from "@/assets/Resume.pdf";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Image from "next/image";
 // ..
 AOS.init({
   duration: 1000, // values from 0 to 3000, with step 50ms
-  easing: "ease in out", // default easing for AOS animations
+  easing: "ease-in-out", // default easing for AOS animations
 });
 const About = () => {
   return (
@@ -35,7 +36,10 @@ const About = () => {
             satisfaction.
           </p>
           <button className="btn btn-primary mr-5 mt-5 text-white font-normal rounded-sm">
-            <a href={Resume} download>
+            {/* <a href={Resume} download>
+              Download Resume
+            </a> */}
+            <a href="#" download>
               Download Resume
             </a>
           </button>

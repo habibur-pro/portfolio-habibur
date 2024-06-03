@@ -2,7 +2,7 @@
 
 import Lottie from "react-lottie";
 import MailAnimation from "../../assets/Mail.json";
-import { useRef } from "react";
+import { FormEvent, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "react-hot-toast";
 import "aos/dist/aos.css";
@@ -10,7 +10,7 @@ import Aos from "aos";
 // ..
 Aos.init({
   duration: 1000,
-  easing: "ease in out",
+  easing: "ease-in-out",
 });
 
 const Contact = () => {
@@ -20,26 +20,28 @@ const Contact = () => {
     animationData: MailAnimation,
   };
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_ccj3o94",
-        "template_6mg9zjb",
-        form.current,
-        "cJriKiLI2shzMWyDi"
-      )
-      .then(
-        () => {
-          toast.success("Thanks You so much for your response!");
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_ccj3o94",
+          "template_6mg9zjb",
+          form.current,
+          "cJriKiLI2shzMWyDi"
+        )
+        .then(
+          () => {
+            toast.success("Thanks You so much for your response!");
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
   };
   return (
     <div className="py-20" id="contact">
@@ -81,8 +83,8 @@ const Contact = () => {
                 className="w-full mb-5 outline-primary border-0 mt-2 px-5 py-2 text-slate-800"
                 name="message"
                 id=""
-                cols="30"
-                rows="5"
+                cols={30}
+                rows={5}
               ></textarea>
             </div>
             <button

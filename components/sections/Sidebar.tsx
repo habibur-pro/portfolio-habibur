@@ -1,5 +1,5 @@
 "use client";
-
+import { Link } from "react-scroll";
 import photo from "@/assets/photo.jpg";
 import { BiHomeAlt2 } from "react-icons/bi";
 import { BiSolidUserDetail, BiSolidContact } from "react-icons/bi";
@@ -8,7 +8,6 @@ import { GiSkills } from "react-icons/gi";
 // import Resume from "../../assets/Resume.pdf";
 import SocialLinks from "@/components/sections/SocialLinks";
 import Image from "next/image";
-import Link from "next/link";
 
 const Sidebar = ({ open, setOpen }) => {
   return (
@@ -31,7 +30,7 @@ const Sidebar = ({ open, setOpen }) => {
             <li className="cursor-pointer hover:text-primary mb-5">
               <Link
                 onClick={() => setOpen(false)}
-                href="/"
+                to="/"
                 spy={true}
                 smooth={true}
                 duration={500}
@@ -118,6 +117,9 @@ const Sidebar = ({ open, setOpen }) => {
                 {/* <a href={Resume} download>
                   Download Resume
                 </a> */}
+                <a href="#" download>
+                  Download Resume
+                </a>
               </button>
             </li>
           </ul>

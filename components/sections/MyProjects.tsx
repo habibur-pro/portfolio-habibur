@@ -1,10 +1,11 @@
 "use client";
-import Underline from "../Underline";
-import artZone from "../../assets/images/artzone.png";
-import tinyCar from "../../assets/images/tinyCar.png";
-import SuperChefs from "../../assets/images/SuperChefs.png";
-import adminPanel from "../../assets/images/adminPanel.png";
-import { Link } from "react-router-dom";
+
+import artZone from "@/assets/images/artzone.png";
+import tinyCar from "@/assets/images/tinyCar.png";
+import SuperChefs from "@/assets/images/SuperChefs.png";
+import adminPanel from "@/assets/images/adminPanel.png";
+import Underline from "../ui/Underline";
+import Link from "next/link";
 
 const MyProjects = () => {
   return (
@@ -67,13 +68,13 @@ const MyProjects = () => {
             <hr className="my-2" />
             <div className="my-3 flex justify-between ">
               <button className="btn btn-accent  text-white btn-sm">
-                <Link to="https://artzone-be3a9.web.app/" target="_blank">
+                <Link href="https://artzone-be3a9.web.app/" target="_blank">
                   Live site
                 </Link>
               </button>
               <button className="btn btn-accent text-white btn-sm">
                 <Link
-                  to="https://github.com/habibur-pro/artZone-client"
+                  href="https://github.com/habibur-pro/artZone-client"
                   target="_blank"
                 >
                   Client
@@ -81,7 +82,7 @@ const MyProjects = () => {
               </button>
               <button className="btn btn-accent text-white btn-sm">
                 <Link
-                  to="https://github.com/habibur-pro/artZone-server"
+                  href="https://github.com/habibur-pro/artZone-server"
                   target="_blank"
                 >
                   Server
@@ -136,7 +137,7 @@ const MyProjects = () => {
             <div className="my-3 flex justify-between">
               <button className="btn btn-accent  text-white btn-sm">
                 <Link
-                  to="https://tiny-car-assignment-11.web.app/"
+                  href="https://tiny-car-assignment-11.web.app/"
                   target="_blank"
                 >
                   Live site
@@ -144,7 +145,7 @@ const MyProjects = () => {
               </button>
               <button className="btn btn-accent text-white btn-sm">
                 <Link
-                  to="https://github.com/habibur-pro/tiny-car-client"
+                  href="https://github.com/habibur-pro/tiny-car-client"
                   target="_blank"
                 >
                   Client
@@ -152,7 +153,7 @@ const MyProjects = () => {
               </button>
               <button className="btn btn-accent text-white btn-sm">
                 <Link
-                  to="https://github.com/habibur-pro/tiny-car-server"
+                  href="https://github.com/habibur-pro/tiny-car-server"
                   target="_blank"
                 >
                   Server
@@ -211,7 +212,7 @@ const MyProjects = () => {
             <div className="my-3 flex justify-between">
               <button className="btn btn-accent  text-white btn-sm">
                 <Link
-                  to="https://simple-firebase-recap-3188a.web.app/"
+                  href="https://simple-firebase-recap-3188a.web.app/"
                   target="_blank"
                 >
                   Live site
@@ -219,7 +220,7 @@ const MyProjects = () => {
               </button>
               <button className="btn btn-accent text-white btn-sm">
                 <Link
-                  to="https://github.com/habibur-pro/super-chef-s-client"
+                  href="https://github.com/habibur-pro/super-chef-s-client"
                   target="_blank"
                 >
                   Client
@@ -227,7 +228,7 @@ const MyProjects = () => {
               </button>
               <button className="btn btn-accent text-white btn-sm">
                 <Link
-                  to="https://github.com/habibur-pro/super-chef-s-server"
+                  href="https://github.com/habibur-pro/super-chef-s-server"
                   target="_blank"
                 >
                   Server
@@ -297,7 +298,7 @@ const MyProjects = () => {
             <div className="my-3 flex justify-between">
               <button className="btn btn-accent  text-white btn-sm">
                 <Link
-                  to="https://artzone-be3a9.web.app/dashboard/manage_classes"
+                  href="https://artzone-be3a9.web.app/dashboard/manage_classes"
                   target="_blank"
                 >
                   Live site
@@ -305,7 +306,7 @@ const MyProjects = () => {
               </button>
               <button className="btn btn-accent text-white btn-sm">
                 <Link
-                  to="https://github.com/habibur-pro/artZone-client"
+                  href="https://github.com/habibur-pro/artZone-client"
                   target="_blank"
                 >
                   Client
@@ -313,7 +314,7 @@ const MyProjects = () => {
               </button>
               <button className="btn btn-accent text-white btn-sm">
                 <Link
-                  to="https://github.com/habibur-pro/artZone-server"
+                  href="https://github.com/habibur-pro/artZone-server"
                   target="_blank"
                 >
                   Server

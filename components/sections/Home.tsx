@@ -1,10 +1,11 @@
 "use client";
 import { TypeAnimation } from "react-type-animation";
 import photo from "../../assets/photo.jpg";
-import Resume from "../../assets/Resume.pdf";
+// import Resume from "../../assets/Resume.pdf";
 import { Link } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import Image from "next/image";
 // ..
 AOS.init({
   delay: 400,
@@ -45,7 +46,10 @@ const Home = () => {
           and advance my career in web development.
         </p>
         <button className="btn btn-primary mr-5 rounded-sm text-white mt-8">
-          <a href={Resume} download>
+          {/* <a href={Resume} download>
+            Download Resume
+          </a> */}
+          <a href="#" download>
             Download Resume
           </a>
         </button>
@@ -63,7 +67,7 @@ const Home = () => {
         </button>
       </div>
       <div className="md:w-1/2 my-5 md:my-auto" data-aos="fade-left">
-        <img className=" rounded-full" src={photo} alt="" />
+        <Image className=" rounded-full" src={photo} alt="" />
       </div>
     </div>
   );

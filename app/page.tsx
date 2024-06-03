@@ -1,21 +1,19 @@
 "use client";
-// import About from "./components/About/About";
-// import Contact from "./components/Contact/Contact";
-// import Home from "./components/Home/Home";
-// import MyProjects from "./components/MyProjects/MyProjects";
-// import MySkills from "./components/MySkills/MySkills";
-// import Sidebar from "./components/Sidebar/Sidebar";
-// import { useState } from "react";
-// import Footer from "./components/Footer/Footer";
 import { pages } from "next/dist/build/templates/app-page";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import Sidebar from "@/components/sections/Sidebar";
+import Home from "@/components/sections/Home";
+import About from "@/components/sections/About";
+import MySkills from "@/components/sections/MySkills";
+import MyProjects from "@/components/sections/MyProjects";
+import Contact from "@/components/sections/Contact";
+import Footer from "@/components/sections/Footer";
 
 const Page = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
-  const handleSidebar = (value) => {
+  const handleSidebar = (value: boolean) => {
     setOpen(value);
   };
   return (
@@ -32,12 +30,12 @@ const Page = () => {
             <Sidebar open={open} setOpen={setOpen}></Sidebar>
           </div>
           <div className="md:col-span-5  md:px-10">
-            {/* <Home />
+            <Home />
             <About />
             <MySkills />
             <MyProjects />
             <Contact />
-            <Footer /> */}
+            <Footer />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 import { Link } from "react-scroll";
-import SocialLinks from "../SocialLinks/SocialLinks";
+import SocialLinks from "./SocialLinks";
 
 const Footer = () => {
   return (
@@ -34,16 +34,16 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-primary">Services</h3>
           <ul>
             <li className="hover:underline cursor-pointer font-normal text-sm mb-1">
-              <Link>Web Design</Link>
+              <Link to="#">Web Design</Link>
             </li>
             <li className="hover:underline cursor-pointer font-normal text-sm mb-1">
-              <Link>Web Development</Link>
+              <Link to="#">Web Development</Link>
             </li>
             <li className="hover:underline cursor-pointer font-normal text-sm mb-1">
-              <Link>E-Commerce Development</Link>
+              <Link to="#">E-Commerce Development</Link>
             </li>
             <li className="hover:underline cursor-pointer font-normal text-sm mb-1">
-              <Link>Full Stack Development</Link>
+              <Link to="#">Full Stack Development</Link>
             </li>
           </ul>
         </div>
@@ -51,7 +51,6 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-primary">Contact</h3>
           <p>(+880) 19771 00811</p>
           <p className="hover:underline cursor-pointer">
-            {" "}
             habiburrahman4542@gmail.com
           </p>
           <p className="mb-3">Gaibandha, Bangladesh</p>
