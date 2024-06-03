@@ -1,3 +1,4 @@
+"use client";
 import { toggleSidebar } from "@/redux/features/sidebarSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import { Menu } from "lucide-react";
