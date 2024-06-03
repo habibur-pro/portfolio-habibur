@@ -8,13 +8,17 @@ import { GiSkills } from "react-icons/gi";
 // import Resume from "../../assets/Resume.pdf";
 import SocialLinks from "@/components/sections/SocialLinks";
 import Image from "next/image";
+import { useAppDispatch, useAppSelector } from "@/redux/hook";
+import { toggleSidebar } from "@/redux/features/sidebarSlice";
 
-const Sidebar = ({ open, setOpen }) => {
+const Sidebar = () => {
+  const isOpen = useAppSelector((state) => state.sidebarToggler.isOpen);
+  const dispatch = useAppDispatch();
   return (
     <>
       <div
         className={`${
-          open ? "left-0 " : "-left-[100%]"
+          isOpen ? "left-0 " : "-left-[100%]"
         }  bg-base-100 w-3/4 md:w-auto  duration-200 md:pt-10  top-0 h-full z-50 md:z-auto fixed  md:left-0  md:min-h-screen   `}
       >
         <div className="flex justify-center items-center flex-col pt-10 md:pt-0">
@@ -29,7 +33,7 @@ const Sidebar = ({ open, setOpen }) => {
           <ul className="flex flex-col text-md ">
             <li className="cursor-pointer hover:text-primary mb-5">
               <Link
-                onClick={() => setOpen(false)}
+                onClick={() => dispatch(toggleSidebar())}
                 to="/"
                 spy={true}
                 smooth={true}
@@ -46,7 +50,7 @@ const Sidebar = ({ open, setOpen }) => {
             </li>
             <li className="cursor-pointer hover:text-primary mb-5">
               <Link
-                onClick={() => setOpen(false)}
+                onClick={() => dispatch(toggleSidebar())}
                 to="about me"
                 spy={true}
                 smooth={true}
@@ -63,7 +67,7 @@ const Sidebar = ({ open, setOpen }) => {
             </li>
             <li className="cursor-pointer hover:text-primary mb-5">
               <Link
-                onClick={() => setOpen(false)}
+                onClick={() => dispatch(toggleSidebar())}
                 to="skills"
                 spy={true}
                 smooth={true}
@@ -80,7 +84,7 @@ const Sidebar = ({ open, setOpen }) => {
             </li>
             <li className="cursor-pointer hover:text-primary mb-5">
               <Link
-                onClick={() => setOpen(false)}
+                onClick={() => dispatch(toggleSidebar())}
                 to="projects"
                 spy={true}
                 smooth={true}
@@ -97,7 +101,7 @@ const Sidebar = ({ open, setOpen }) => {
             </li>
             <li className="inline-flex items-center cursor-pointer hover:text-primary mb-5">
               <Link
-                onClick={() => setOpen(false)}
+                onClick={() => dispatch(toggleSidebar())}
                 to="contact"
                 spy={true}
                 smooth={true}
